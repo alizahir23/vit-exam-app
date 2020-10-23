@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import UserContext from './Utilities/UserContext'
+import PrivateRoute from './Utilities/PrivateRoute'
+import Login from './Pages/Login/Login';
+import Home from './Pages/Home/Home'
+import Test from './Pages/Test/Test'
+import PrivateHeader from './Components/Headers/PrivateHeader'
+
 
 function App() {
+
+
+  const [User, setUser] = useState(null);
+
+  useEffect(() => {
+    console.log(localStorage.getItem("user"))
+    setUser(localStorage.getItem("user"))
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <UserContext.Provider value={{ User, setUser }}>
+          <PrivateHeader />
+          <Switch>
+            <Route path="/" component={Login} exact />
+            <PrivateRoute path="/Home" component={Home} exact />
+            <PrivateRoute path="/Test" component={Test} exact />
+          </Switch>
+          {/* <Footer /> */}
+        </UserContext.Provider>
+      </div>
+    </Router>
   );
 }
 

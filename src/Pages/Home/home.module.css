@@ -1,0 +1,40 @@
+.container {
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.dropdown {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown h5 {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 16px;
+  width: 160px;
+}
+
+select {
+  padding: 4px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submit {
+  margin: 0;
+  background-color: rgb(94, 164, 255);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

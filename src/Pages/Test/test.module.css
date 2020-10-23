@@ -1,0 +1,97 @@
+.container {
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-list {
+  max-width: 1000px;
+  width: 70vw;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header button {
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 55px;
+  border: none;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.header button:focus {
+  outline: none;
+}
+
+.question {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.question-text {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  min-height: 100px;
+}
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 20px;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 55px;
+  cursor: pointer;
+}
+
+.submit {
+  margin: 0;
+  background-color: rgb(94, 164, 255);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.remark textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.remark h5 {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 18px;
+}
