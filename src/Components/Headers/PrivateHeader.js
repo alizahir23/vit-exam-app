@@ -31,7 +31,7 @@ const PrivateHeader = () => {
             {localStorage.getItem("user") &&
 
                 <div className={styles.right}>
-                    <h3><span>Welcome, </span>{user}</h3>
+                    <h3><span>Welcome, </span></h3>
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             }
