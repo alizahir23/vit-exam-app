@@ -5,6 +5,7 @@ import PrivateRoute from './Utilities/PrivateRoute'
 import Login from './Pages/Login/Login';
 import Home from './Pages/Home/Home'
 import Test from './Pages/Test/Test'
+import ViewTest from './Pages/Test/ViewTest'
 import PrivateHeader from './Components/Headers/PrivateHeader'
 
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" component={Login} exact />
             <PrivateRoute path="/Home" component={Home} exact />
             <PrivateRoute path="/Test" component={Test} exact />
+            <PrivateRoute path="/ViewTest" component={ViewTest} exact />
           </Switch>
           {/* <Footer /> */}
         </UserContext.Provider>

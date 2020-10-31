@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const initiateLogin = async (email, password) => {
-    const url = "https://vit-vellore.herokuapp.com/student/checkauth/check"
+
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -29,4 +29,26 @@ export const initiateLogin = async (email, password) => {
     //     console.log(response)
     //     return "Login unsuccessful!"
     // }
+}
+
+export const initiateProfessorLogin = async (registration) => {
+
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({ "registration": registration });
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'manual'
+    };
+
+    const response = await fetch("https://vit-vellore.herokuapp.com/student/professor", requestOptions)
+    const result = await response.json()
+    console.log(result)
+    return result
+
 }
